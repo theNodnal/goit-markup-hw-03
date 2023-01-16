@@ -40,32 +40,6 @@ img {
     display: block;
 }
 
-/* -------------------header -------------- */
-
-.container {
-    /* width: 1158px; */
-    /* width: 1440px; */
-    display: flex;
-    justify-content: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    /* outline: 2px solid red; */
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    ;
-}
-
 .list {
     list-style: none;
 }
@@ -74,6 +48,31 @@ img {
     text-decoration: none;
 
 }
+
+.container {
+    width: 1158px;
+    /* justify-content: center; */
+    padding: 0 15px;
+    margin: 0 auto;
+    /* outline: 2px solid red; */
+}
+
+/* -------------------header -------------- */
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-heder {
+    border-bottom: 1px solid var(--border-portfolio-btn);
+}
+
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
 
 .header-list {
     display: flex;
@@ -87,7 +86,7 @@ img {
 }
 
 .header-logo {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.33;
@@ -119,6 +118,7 @@ img {
 .address {
     display: flex;
     gap: 40px;
+    align-items: center;
 }
 
 .header-tel {
@@ -134,11 +134,17 @@ img {
     color: var(--hover-color);
 }
 
+/*----------------------- hero ------------------------*/
+
 .hero {
     background: var(--main-color);
     padding-top: 188px;
     padding-bottom: 188px;
     /* align-items: center; */
+}
+
+.hero-content {
+    justify-items: center;
 }
 
 .hero-title {
@@ -147,7 +153,8 @@ img {
     line-height: 1.07;
     text-align: center;
     color: var(--background-color);
-    /* max-width: 550px; */
+    margin: 0 auto;
+    max-width: 511px;
 }
 
 .hero-btn {
@@ -159,7 +166,12 @@ img {
     background: var(--hover-color);
     color: var(--background-color);
     margin-top: 48px;
-    margin-left: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    display: flex;
+    border-color: var(--hover-color);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
 }
 
 .portfolio-btn {
@@ -179,6 +191,9 @@ img {
 .portfolio-btn:focus {
     color: var(--background-color);
     background-color: var(--hover-btn-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+    0px 2px 1px rgba(0, 0, 0, 0.08), 
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .hero-btn:hover,
@@ -204,7 +219,9 @@ img {
     gap: 24px;
 }
 
-.category-item {}
+.category-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+}
 
 .category-suptext {
     font-weight: 500;
@@ -258,16 +275,33 @@ img {
 .team-name {
     padding-top: 32px;
     padding-bottom: 32px;
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-list {
     display: flex;
+    justify-content: center;
     gap: 24px;
+}
+
+.team-item {
+}
+
+.second-content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
     justify-content: center;
 }
 
-.team-item {}
+.portfolio-content-text {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border: 1px solid var(--footer-text);
+    border-top: none;
+}
 
 .team-suptext {
     font-weight: 500;
@@ -299,8 +333,10 @@ img {
     margin-left: 16px;
 }
 
+/*------------------------- footer -----------------------------*/
+
 .footer-logo {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.16;
@@ -313,6 +349,7 @@ img {
     background: var(--main-color);
     padding-top: 100px;
     padding-bottom: 100px;
+    display: flex;
 }
 
 .footer-accent {
@@ -326,9 +363,7 @@ img {
     max-width: 264px;
 }
 
-.section {
-    width: 1158px;
-}
+.section {}
 
 
 /*----------------- PORTFOLIO -------------- */
@@ -345,15 +380,3 @@ img {
     gap: 24px;
 }
 
-.second-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-}
-
-.portfolio-content-text {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    outline: 1px solid var(--border-portfolio-btn);
-}
